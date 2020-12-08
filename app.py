@@ -20,8 +20,9 @@ MONGODB_DBNAME = 'mydb'
 
 app = Flask(__name__)
 
-client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@cluster0.idqxn.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
-db = client[MONGODB_DBNAME]
+
+client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@web-heroku-deployment.bwedt.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
+db = client.test
 
 
 ############################################################
